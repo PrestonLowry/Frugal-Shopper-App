@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/priceA"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        app:layout_constraintBottom_toTopOf="@+id/priceB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ouncesA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/priceC"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ouncesC"
+        app:layout_constraintTop_toBottomOf="@+id/priceB" />
+
+    <EditText
+        android:id="@+id/priceB"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ouncesB"
+        app:layout_constraintTop_toBottomOf="@+id/priceA" />
+
+    <EditText
+        android:id="@+id/poundsC"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Pounds"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintStart_toStartOf="@+id/poundsB"
+        app:layout_constraintTop_toBottomOf="@+id/poundsB" />
+
+    <EditText
+        android:id="@+id/ouncesC"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ounces"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintStart_toStartOf="@+id/ouncesB"
+        app:layout_constraintTop_toBottomOf="@+id/ouncesB" />
+
+    <EditText
+        android:id="@+id/poundsB"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Pounds"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/poundsC"
+        app:layout_constraintStart_toStartOf="@+id/poundsA"
+        app:layout_constraintTop_toBottomOf="@+id/poundsA" />
+
+    <EditText
+        android:id="@+id/ouncesB"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ounces"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/ouncesC"
+        app:layout_constraintStart_toStartOf="@+id/ouncesA"
+        app:layout_constraintTop_toBottomOf="@+id/ouncesA" />
+
+    <EditText
+        android:id="@+id/ouncesA"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ounces"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/ouncesB"
+        app:layout_constraintEnd_toStartOf="@+id/priceA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/poundsA"
+        app:layout_constraintTop_toBottomOf="@+id/ounces" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:text="Calculate Best Price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelA"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:ems="10"
+        android:text="Product A:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/labelB"
+        app:layout_constraintEnd_toStartOf="@+id/poundsA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <TextView
+        android:id="@+id/labelB"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:ems="10"
+        android:text="Product B:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/labelC"
+        app:layout_constraintEnd_toStartOf="@+id/poundsB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelA" />
+
+    <TextView
+        android:id="@+id/labelC"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:ems="10"
+        android:text="Product C:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toStartOf="@+id/poundsC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelB" />
+
+    <EditText
+        android:id="@+id/poundsA"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Pounds"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/poundsB"
+        app:layout_constraintEnd_toStartOf="@+id/ouncesA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/labelA"
+        app:layout_constraintTop_toBottomOf="@+id/pounds" />
+
+    <TextView
+        android:id="@+id/unitPriceA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:text="Unit Price A: "
+        app:layout_constraintEnd_toStartOf="@+id/calcPriceA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
+
+    <TextView
+        android:id="@+id/unitPriceB"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:text="Unit Price B: "
+        app:layout_constraintEnd_toStartOf="@+id/calcPriceB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitPriceA" />
+
+    <TextView
+        android:id="@+id/unitPriceC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:text="Unit Price C: "
+        app:layout_constraintEnd_toStartOf="@+id/calcPriceC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitPriceB" />
+
+    <TextView
+        android:id="@+id/calcPriceA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:text="_______"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/calcPriceB"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
+
+    <TextView
+        android:id="@+id/calcPriceB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:text="_______"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/calcPriceC"
+        app:layout_constraintTop_toBottomOf="@+id/calcPriceA" />
+
+    <TextView
+        android:id="@+id/calcPriceC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:text="_______"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcPriceB" />
+
+    <TextView
+        android:id="@+id/pounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="229dp"
+        android:text="Pounds"
+        app:layout_constraintBottom_toTopOf="@+id/unitPriceA"
+        app:layout_constraintEnd_toStartOf="@+id/ounces"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/ounces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Ounces"
+        app:layout_constraintBottom_toTopOf="@+id/ouncesA"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pounds"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        app:layout_constraintBottom_toTopOf="@+id/priceA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ounces"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Constraints
+        android:id="@+id/constraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Constraints
+        android:id="@+id/constraints2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
